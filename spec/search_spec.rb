@@ -22,8 +22,8 @@ describe RGSearch::Search do
 	context 'without proxy' do
 	
 		setup do
-			RyBOSS.proxy_host = nil
-			RyBOSS.proxy_port = nil
+			RGSearch.proxy_host = nil
+			RGSearch.proxy_port = nil
 		end
 	
 		it "should make web search" do
@@ -70,7 +70,7 @@ describe RGSearch::Search do
 			RGSearch.proxy_port = '1234'
 			
 			# comment this line when test real proxys
-			#RGSearch.should_receive(:proxy_host).and_return(nil)
+			RGSearch.should_receive(:proxy_host).and_return(nil)
 		end
 		
 		it "should make web search" do
