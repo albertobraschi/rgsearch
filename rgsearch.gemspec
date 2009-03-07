@@ -2,13 +2,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rgsearch}
-  s.version = "0.8.5"
+  s.version = "0.9"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["TangZero"]
-  s.date = %q{2009-02-10}
+  s.date = %q{2009-03-06}
   s.email = %q{t4ngz3r0@gmail.com}
-  s.files = ["lib/rgsearch/base_result.rb", "lib/rgsearch/exception.rb", "lib/rgsearch/request.rb", "lib/rgsearch/result.rb", "lib/rgsearch/resultset.rb", "lib/rgsearch/search.rb", "lib/rgsearch.rb", "lib", "Rakefile", "README.textile", "rgsearch.gemspec", "samples", "spec"]
+  s.files = ["lib/rgsearch/exception.rb", "lib/rgsearch/search.rb", "lib/rgsearch/base_result.rb", "lib/rgsearch/request.rb", "lib/rgsearch/result.rb", "lib/rgsearch/resultset.rb", "lib/rgsearch.rb", "Rakefile", "README.textile"]
   s.homepage = %q{http://github.com/tangzero/rgsearch}
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{rgsearch}

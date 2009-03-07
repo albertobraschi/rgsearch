@@ -5,7 +5,7 @@ require 'rake/gempackagetask'
 require 'spec/rake/spectask'
  
 GEM = "rgsearch"
-GEM_VERSION = "0.8.5"
+GEM_VERSION = "0.9"
 SUMMARY = "Ruby Google Search Mashup Framework"
 AUTHOR = "TangZero"
 EMAIL = "t4ngz3r0@gmail.com"

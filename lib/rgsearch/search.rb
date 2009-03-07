@@ -41,7 +41,9 @@ module RGSearch
 		def self.validate(options, query)
 			raise RGSearchException, 'key is not specified' unless RGSearch.key
 			raise RGSearchException, 'start is invalid' if options[:start] and options[:start] < 0
-			raise RGSearchException, 'result size is invalid' unless ["small", "large"].include? options[:rsz]
+			unless ["small", "large"].include? options[:rsz] || "small"
+				raise RGSearchException, 'result size is invalid'
+			end
 			options[:q] = query
 			options[:v] = API_VERSION
 			options[:key] = RGSearch.key			
