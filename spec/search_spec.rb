@@ -89,7 +89,7 @@ describe RGSearch::Search do
 		end
 		
 		it "should make blogs search" do
-			resultset = RGSearch::Search.blogs('ruby', :hl => 'pt-BR')
+			resultset = RGSearch::Search.blogs('ruby', :hl => 'pt-BR', :rsz => 'small')
 			resultset.responseStatus.should eql(200)
 		end
 		
