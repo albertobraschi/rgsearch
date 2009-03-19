@@ -7,7 +7,7 @@ module RGSearch
 			uri.query = to_query options
 			request = Net::HTTP::Get.new uri.request_uri
 			response = connection.start(uri.host) { |http| http.request request }
-			response.body
+			Unicode.unescape(response.body)
 		rescue Exception => e
 			raise RGSearchException, e.message
 		end
