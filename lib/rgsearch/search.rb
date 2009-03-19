@@ -35,7 +35,7 @@ module RGSearch
 			url = URI.encode "#{API_URL}/#{engine}"
 			validate options, query
 			data = Request.get(url, options)
-			ResultSet.new JSON.parse(data)
+			ResultSet.new ActiveSupport::JSON.decode(data)
 		end
 		
 		def self.validate(options, query)
