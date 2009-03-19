@@ -20,7 +20,7 @@ spec = Gem::Specification.new do |s|
   s.require_paths = ['lib']
   s.files = FileList['lib/**/*.rb', '[A-Z]*'].to_a
   
-  s.add_dependency(%q<json>, [">= 1.1.1"])
+  s.add_dependency(%q<activesupport>, [">= 2.2.2"])
   s.has_rdoc = false
   
   s.author = AUTHOR
