@@ -1,4 +1,4 @@
-module RGsearch
+module RGSearch
 	
 	class Unicode
 	
