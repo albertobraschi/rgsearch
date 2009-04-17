@@ -1,29 +1,33 @@
 module RGSearch
 
-	class Request
+  class Request
 
-		def self.get(url, options = {})
-			uri = URI.parse URI.encode(url)
-			uri.query = to_query options
-			request = Net::HTTP::Get.new uri.request_uri
-			response = connection.start(uri.host) { |http| http.request request }
-			Unicode.unescape(response.body)
+    def self.get(url, params = {}, options = {})
+			options = {:proxy => proxy?}.merge(options)
+			uri = get_uri(url, params)
+			response = uri.open(options).collect.join
+			Unicode.unescape(response)			
 		rescue Exception => e
 			raise RGSearchException, e.message
 		end
 
-		private		
-		def self.connection()
-			Net::HTTP.Proxy RGSearch.proxy_host, RGSearch.proxy_port,
-							RGSearch.proxy_user, RGSearch.proxy_pass
-		end
-
-		def self.to_query(options = {})
-			query = []
-			options.each { |k, v| query << "#{k}=#{v}" }
-			URI.encode query.join('&')
+		private
+		def self.proxy?
+			ENV.include?("http_proxy") || ENV.include?("HTTP_PROXY")
 		end
 		
-	end
+		def self.to_query(params = {})
+			query = []
+			params.each { |k, v| query << "#{k}=#{v}" }
+			URI.encode(query.join("&"))
+		end
+		
+		def self.get_uri(url, params)
+		  uri = URI.parse(URI.encode(url))
+			uri.query = to_query(params)
+			return uri
+		end
+    
+  end
 
 end

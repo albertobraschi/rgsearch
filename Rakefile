@@ -1,11 +1,11 @@
-require 'rubygems'
-require 'rubygems/specification'
-require 'rake'
-require 'rake/gempackagetask'
-require 'spec/rake/spectask'
+require "rubygems"
+require "rubygems/specification"
+require "rake"
+require "rake/gempackagetask"
+require "spec/rake/spectask"
  
 GEM = "rgsearch"
-GEM_VERSION = "0.9"
+GEM_VERSION = "1.0"
 SUMMARY = "Ruby Google Search Mashup Framework"
 AUTHOR = "TangZero"
 EMAIL = "t4ngz3r0@gmail.com"
@@ -17,8 +17,8 @@ spec = Gem::Specification.new do |s|
   s.version = GEM_VERSION
   s.platform = Gem::Platform::RUBY
   s.summary = SUMMARY
-  s.require_paths = ['lib']
-  s.files = FileList['lib/**/*.rb', '[A-Z]*'].to_a
+  s.require_paths = ["lib"]
+  s.files = FileList["lib/**/*.rb", "[A-Z]*"].to_a
   
   s.add_dependency(%q<activesupport>, [">= 2.2.2"])
   s.has_rdoc = false
@@ -27,11 +27,11 @@ spec = Gem::Specification.new do |s|
   s.email = EMAIL
   s.homepage = HOMEPAGE
 
-  s.rubyforge_project = GEM # GitHub bug, gem isn't being build when this miss
+  s.rubyforge_project = GEM # GitHub bug, gem isn"t being build when this miss
 end
 
 Spec::Rake::SpecTask.new do |t|
-  t.spec_files = FileList['spec/**/*_spec.rb']
+  t.spec_files = FileList["spec/**/*_spec.rb"]
   t.spec_opts = %w(-fs --color)
 end
   
