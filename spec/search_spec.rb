@@ -21,37 +21,37 @@ describe RGSearch::Search do
   
   it "should make web search" do
     resultset = RGSearch::Search.web("github", :hl => "pt-BR", :rsz => "small")
-    resultset.responseStatus.should eql(200)
+    resultset.response_status.should eql(200)    
   end
   
   it "should make images search" do
     resultset = RGSearch::Search.images("flower", :hl => "pt-BR", :rsz => "small")
-    resultset.responseStatus.should eql(200)
+    resultset.response_status.should eql(200)
   end
   
   it "should make news search" do
     resultset = RGSearch::Search.news("obama", :hl => "pt-BR", :rsz => "small")
-    resultset.responseStatus.should eql(200)
+    resultset.response_status.should eql(200)
   end
   
   it "should make blogs search" do
     resultset = RGSearch::Search.blogs("ruby", :hl => "pt-BR", :rsz => "small")
-    resultset.responseStatus.should eql(200)
+    resultset.response_status.should eql(200)
   end
   
   it "should make videos search" do
     resultset = RGSearch::Search.videos("fast and furious", :hl => "pt-BR", :rsz => "small")
-    resultset.responseStatus.should eql(200)
+    resultset.response_status.should eql(200)
   end
   
   it "should make books search" do
     resultset = RGSearch::Search.books("ruby pragmatic guide", :hl => "pt-BR", :rsz => "small")
-    resultset.responseStatus.should eql(200)
+    resultset.response_status.should eql(200)
   end  
   
   it "should make locals search" do
     resultset = RGSearch::Search.local("av. paulista, são paulo, sp, br", :hl => "pt-BR", :rsz => "small")
-    resultset.responseStatus.should eql(200)
+    resultset.response_status.should eql(200)    
   end
   
 end

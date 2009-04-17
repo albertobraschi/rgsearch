@@ -6,7 +6,7 @@ module RGSearch
 			options = {:proxy => proxy?}.merge(options)
 			uri = get_uri(url, params)
 			response = uri.open(options).collect.join
-			Unicode.unescape(response)			
+			Unicode.unescape(response)
 		rescue Exception => e
 			raise RGSearchException, e.message
 		end
