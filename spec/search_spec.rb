@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + "/spec_helper"
 describe RGSearch::Search do
   
   before(:each) do
-    RGSearch.key = "ABQIAAAA8AEfrp2kWp9QoDYfq067fhSMXiYpZHpy0_1o1XweffEdHvFrNRQX-ZbG9IXDXY2r7l3te4RKb5mvlQ"    
+    RGSearch.key = "ABQIAAAA8AEfrp2kWp9QoDYfq067fhSMXiYpZHpy0_1o1XweffEdHvFrNRQX-ZbG9IXDXY2r7l3te4RKb5mvlQ"
   end
   
   it "should has an error when trying to search without appid" do
