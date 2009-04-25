@@ -4,7 +4,7 @@ h2. INSTALLATION
 
 h2. USAGE
 
-@coming soon@
+"Usage be found on Wiki":http://wiki.github.com/tangzero/rgsearch
 
 h2. LICENSE:
 
