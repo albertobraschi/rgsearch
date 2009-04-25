@@ -12,7 +12,8 @@ module RGSearch
 
 		private
 		def make_result(value)
-			if value.kind_of?(String) or value.kind_of?(Numeric)
+			if value.kind_of?(String) or value.kind_of?(Numeric) \
+          value.kind_of?(TrueClass) or value.kind_of?(FalseClass)
 				value
 			elsif value.kind_of?(Hash)
 				Result.new(value)
